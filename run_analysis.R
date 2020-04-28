@@ -1,3 +1,11 @@
+
+url = 'https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip'
+if (!dir.exists('./UCI HAR Dataset')){
+   download.file(url,'./UCI HAR Dataset.zip', mode = 'wb')
+   unzip("UCI HAR Dataset.zip", exdir = getwd())
+}
+
+
 # Reading Featues 
 tmp = read.csv("UCI HAR Dataset\\features.txt",sep = " ",header = FALSE)
 FeaturesName = as.character(tmp[,2])
