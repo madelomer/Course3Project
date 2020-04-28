@@ -64,4 +64,4 @@ for(activity in activties)
     temp = sapply (mean_std[mean_std$Y == activity & mean_std$S == subject,c(3:81)],mean)
     tidy = rbind(tidy ,data.frame(S = subject,Y = activity,as.list(temp)))
   }
-write.csv(tidy,"tidy.csv",row.names = FALSE)
+write.csv(tidy,"tidy.txt",row.names = FALSE)
