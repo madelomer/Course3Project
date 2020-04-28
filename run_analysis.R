@@ -1,4 +1,7 @@
+# Load data.table Library 
+
 library(data.table)
+# Dowload Files if folder doese not exist 
 url = 'https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip'
 if (!dir.exists('./UCI HAR Dataset')){
    download.file(url,'./UCI HAR Dataset.zip', mode = 'wb')
